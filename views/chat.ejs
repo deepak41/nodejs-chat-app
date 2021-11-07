@@ -26,6 +26,7 @@
       </div>
     </main>
     
+    <div class="feedback"></div>
     <div class="chat-form-container">
       <form id="chat-form">
         <input
@@ -35,6 +36,8 @@
           value=""
           required
           autocomplete="off"
+          onkeypress="typing(event)"
+          onkeyup="doneTyping()"
         />
         <button class="btn-plane" onclick="sendMsg(form.msg.value);return false;"><i class="fas fa-paper-plane"></i> </button>
       </form>
@@ -48,5 +51,6 @@
   ></script>
   <script src="/socket.io/socket.io.js"></script>
   <script src="js/chat.js"></script>
+  <script src="js/utils.js"></script>
 </body>
 </html>

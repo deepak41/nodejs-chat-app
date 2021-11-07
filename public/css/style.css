@@ -60,6 +60,13 @@ a {
 	justify-content: space-between;
 }
 
+.feedback {
+	color: white;
+  background-color: #630000;
+  text-align: right;
+  padding: 0.25% 5%;
+}
+
 .chat-main {
 	display: grid;
 	grid-template-columns: 1fr 3fr;
