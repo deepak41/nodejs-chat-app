@@ -3,8 +3,8 @@ const moment = require('moment');
 
 const users = [];
 
-// Join user to chat
-function joinUser(id, username, room) {
+// Join user to chat room
+function joinRoom(id, username, room) {
   const user = { id, username, room };
 
   users.push(user);
@@ -41,7 +41,7 @@ function formatMessage(username, text) {
 }
 
 module.exports = {
-  joinUser,
+  joinRoom,
   getActiveUser,
   exitRoom,
   getIndividualRoomUsers,

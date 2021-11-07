@@ -1,10 +1,10 @@
 const {
 	getActiveUser,
 	exitRoom,
-	joinUser,
+	joinRoom,
 	getIndividualRoomUsers,
 	formatMessage
-} = require('./helpers/userHelper');
+} = require('./helper');
 
 
 function main(io) {
@@ -13,7 +13,7 @@ function main(io) {
 	io.on('connection', socket => {
 
 		socket.on('joinRoom', ({ username, room }) => {
-			const user = joinUser(socket.id, username, room);
+			const user = joinRoom(socket.id, username, room);
 
 			socket.join(user.room);
 
