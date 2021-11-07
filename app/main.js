@@ -42,11 +42,20 @@ function main(io) {
 		// Listen for client message
 		socket.on('chatMessage', msg => {
 			const user = getActiveUser(socket.id);
-
 			io.to(user.room).emit('message', formatMessage(user.username, msg));
 		});
 
 
+		//Broadcasting the user who is typing
+        socket.on('typing', (data) => {
+            socket.broadcast.to(data.room).emit('typing', data.username)
+        })
+
+
+        //Broadcasting the user who has stopped typing
+        socket.on('done-typing', (data) => {
+            socket.broadcast.to(data.room).emit('done-typing', data.username)
+        })
 
 
 
