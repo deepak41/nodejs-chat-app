@@ -1,7 +1,10 @@
+const moment = require('moment');
+
+
 const users = [];
 
 // Join user to chat
-function newUser(id, username, room) {
+function joinUser(id, username, room) {
   const user = { id, username, room };
 
   users.push(user);
@@ -28,9 +31,19 @@ function getIndividualRoomUsers(room) {
   return users.filter(user => user.room === room);
 }
 
+// Format the message
+function formatMessage(username, text) {
+  return {
+    username,
+    text,
+    time: moment().format('h:mm a')
+  };
+}
+
 module.exports = {
-  newUser,
+  joinUser,
   getActiveUser,
   exitRoom,
-  getIndividualRoomUsers
+  getIndividualRoomUsers,
+  formatMessage
 };
