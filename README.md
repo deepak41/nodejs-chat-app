@@ -35,8 +35,6 @@ color scheme for pages
 
 increase size of container in chat.html
 
-change 'server has started' message
-
 change font family open-sans
 
 add favicon and logo
