@@ -11,10 +11,10 @@ function main(io) {
 
 	// this block will run when the client connects
 	io.on('connection', socket => {
-
-		socket.on('joinRoom', ({ username, room }) => {
+		
+		// Runs when client joins a chat room
+		socket.on('joinRoom', ({username, room}) => {
 			const user = joinRoom(socket.id, username, room);
-
 			socket.join(user.room);
 
 			// General welcome
@@ -36,9 +36,6 @@ function main(io) {
 		});
 
 
-
-
-
 		// Listen for client message
 		socket.on('chatMessage', msg => {
 			const user = getActiveUser(socket.id);
@@ -58,12 +55,10 @@ function main(io) {
         })
 
 
-
 		// Runs when client disconnects
 		socket.on('disconnect', () => {
 			const user = exitRoom(socket.id);
-
-			if (user) {
+			if(user) {
 				io.to(user.room).emit(
 					'message',
 					formatMessage("WebCage", `${user.username} has left the room`)
@@ -76,9 +71,6 @@ function main(io) {
 				});
 			}
 		});
-
-
-
 	})
 }
 
