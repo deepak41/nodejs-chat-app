@@ -28,7 +28,6 @@ The app should be up and running.
 
 //TO DO:-
 
-implemnt User is typing messaage
 typing - styling color font etc
 
 color scheme for pages
@@ -38,5 +37,3 @@ increase size of container in chat.html
 change font family open-sans
 
 add favicon and logo
-
-folder name "server" and "client"
