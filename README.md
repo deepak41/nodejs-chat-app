@@ -7,7 +7,6 @@ NodeJs 10.23.3, ExpressJs 4.13.0 based chat service.
 
 ## Getting Started
 ### To run the project:  
-Make sure MongoDB instance is running on the system.  
 1. Clone the project  
 `$ git clone https://github.com/deepak41/nodejs-chat-app.git`
 
