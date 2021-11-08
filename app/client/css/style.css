@@ -1,9 +1,17 @@
-@import url('https://fonts.googleapis.com/css?family=Roboto&display=swap');
+/*@import url('https://fonts.googleapis.com/css?family=Roboto&display=swap');*/
+
+/*My custom fonts*/
+@font-face {
+  font-family: OpenSans;
+  src:url(../fonts/OpenSans-Regular.ttf);
+}
 
 :root {
-	--dark-color-a: #000000;
-	--dark-color-b: #272728;
-	--light-color: #e0e3f4;
+	--dark-color-a: #003638;
+	--dark-color-b: #055052;
+	--light-color-b: #53B8BB;
+	--light-color: #F3F2C9;
+	
 	--success-color: #65ce65;
 	--error-color: #df3832;
 }
@@ -15,7 +23,7 @@
 }
 
 body {
-	font-family: 'Roboto', sans-serif;
+	font-family: 'OpenSans', sans-serif;
 	font-size: 16px;
 	background: var(--light-color);
 	margin: 20px;
@@ -42,8 +50,8 @@ a {
 /* Chat Page */
 
 .chat-container {
-	max-width: 1100px;
-	background: #fff;
+	max-width: 95%;
+	background: white;
 	margin: 30px auto;
 	overflow: hidden;
 
@@ -51,7 +59,7 @@ a {
 
 .chat-header {
 	background: var(--dark-color-a);
-	color: #fff;
+	color: white;
 	border-top-left-radius: 5px;
 	border-top-right-radius: 5px;
 	padding: 15px;
@@ -60,12 +68,6 @@ a {
 	justify-content: space-between;
 }
 
-.feedback {
-	color: white;
-  background-color: #630000;
-  text-align: right;
-  padding: 0.25% 5%;
-}
 
 .chat-main {
 	display: grid;
@@ -79,7 +81,6 @@ a {
 		grid-template-columns: 1fr;
 		height:65vh;
 	}
-
 	.chat-sidebar {
 		display: none;
 	}
@@ -87,7 +88,7 @@ a {
 
 .chat-sidebar {
 	background: var(--dark-color-b);
-	color: #fff;
+	color: white;
 	padding: 20px 20px 60px;
 	overflow-y: scroll;
 }
@@ -136,7 +137,7 @@ a {
 .chat-messages .message {
 	padding: 10px;
 	margin-bottom: 15px;
-	background-color: var(--light-color);
+	background-color: var(--light-color-b);
 	border-radius: 5px;
 }
 
@@ -150,7 +151,7 @@ a {
 }
 
 .chat-messages .message .meta span {
-	color: #777;
+	color: #575353;
     margin-left: auto;
 }
 
@@ -192,7 +193,7 @@ i.fas.fa-paper-plane{
 .join-container {
 	max-width: 500px;
 	margin: 80px auto;
-	color: #fff;
+	color: white;
 }
 
 .join-header {
@@ -256,4 +257,24 @@ i.fas.fa-paper-plane{
 .flex{
     display: grid;
     place-content: center;
+}
+
+
+/* My custom styles */
+.leave-room {
+    font-family: 'OpenSans';
+    background-color: red;
+    color: white;
+    font-weight: bold;
+}
+
+.msg-input {
+    font-family: 'OpenSans';
+}
+
+.feedback {
+	color: white;
+	background-color: #630000;
+	text-align: right;
+	padding: 0.25% 5%;
 }

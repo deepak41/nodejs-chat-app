@@ -18,14 +18,14 @@ function main(io) {
 			socket.join(user.room);
 
 			// General welcome
-			socket.emit('message', formatMessage("WebCage", 'Messages are limited to this room! '));
+			socket.emit('message', formatMessage("NodeJSChatApp", 'Welcome to the ' + room + ' chat room!'));
 
 			// Broadcast everytime users connects
 			socket.broadcast
 				.to(user.room)
 				.emit(
 					'message',
-					formatMessage("WebCage", `${user.username} has joined the room`)
+					formatMessage("NodeJSChatApp", `${user.username} has joined the room`)
 				);
 
 			// Current active users and room name
@@ -61,7 +61,7 @@ function main(io) {
 			if(user) {
 				io.to(user.room).emit(
 					'message',
-					formatMessage("WebCage", `${user.username} has left the room`)
+					formatMessage("NodeJSChatApp", `${user.username} has left the room`)
 				);
 
 				// Current active users and room name
