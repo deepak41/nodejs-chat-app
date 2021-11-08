@@ -5,7 +5,7 @@ const users = [];
 
 // Join user to chat room
 function joinRoom(id, username, room) {
-  const user = { id, username, room };
+  const user = {id, username, room};
 
   users.push(user);
 
@@ -21,7 +21,7 @@ function getActiveUser(id) {
 function exitRoom(id) {
   const index = users.findIndex(user => user.id === id);
 
-  if (index !== -1) {
+  if(index !== -1) {
     return users.splice(index, 1)[0];
   }
 }

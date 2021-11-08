@@ -6,7 +6,7 @@ const feedback = document.querySelector('.feedback');
 
 function sendMsg(msg) {
 	msg = msg.trim();
-	if (!msg)
+	if(!msg)
 		return false;
 
 	// Emit message to server
@@ -52,7 +52,7 @@ function outputUsers(users) {
 //Prompt the user before leaving chat room
 function leaveRoom() {
 	const response = confirm('Are you sure you want to leave the chatroom?');
-	if (response) {
+	if(response) {
 		window.location.replace('/');
 	}
 }
