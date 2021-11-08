@@ -11,7 +11,7 @@
   <div class="chat-container">
     <header class="chat-header">
       <h1><img src="img/logo.jpg" alt="Paris" style="height:auto; width:5.5%"> NodeJS Chat App </h1>
-      <button type="button" class="btn" style="background-color:red; color:white;" onclick="leaveRoom()">Leave Room</button>
+      <button type="button" class="btn leave-room" onclick="leaveRoom()">Leave Room</button>
     </header>
     <main class="chat-main">
       <div class="chat-sidebar">
@@ -28,6 +28,7 @@
       <form id="chat-form">
         <input
           id="msg"
+          class="msg-input"
           type="text"
           placeholder="Type a Message"
           value=""
