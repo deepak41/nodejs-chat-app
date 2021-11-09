@@ -72,7 +72,7 @@ function doneTyping() {
 	typingTimer = setTimeout(function () {
 		//do something
     	socket.emit('done-typing', { username, room });
-	}, 2000);
+	}, 1000);
 }
 
 
