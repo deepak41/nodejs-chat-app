@@ -9,7 +9,7 @@
 :root {
 	--dark-color-a: #003638;
 	--dark-color-b: #055052;
-	--light-color-b: #FFAD81;
+	--light-color-b: #D7EE88;
 	--light-color: #F3F2C9;
 	
 	--success-color: #65ce65;
@@ -139,6 +139,7 @@ a {
 	margin-bottom: 15px;
 	background-color: var(--light-color-b);
 	border-radius: 5px;
+	color: #4B4B43;
 }
 
 .chat-messages .message .meta {
