@@ -12,6 +12,7 @@ NodeJs 10.23.3, ExpressJs 4.13.0 based chat service.
 
 
 2. Then enter the following commands:   
+`$ cd nodejs-chat-app`  
 `$ sudo npm install`  
 `$ sudo nodemon`  
 
