@@ -1,9 +1,3 @@
-// Get username and room from URL
-const { username, room } = Qs.parse(location.search, {
-	ignoreQueryPrefix: true,
-});
-
-
 const socket = io();
 
 // Join chatroom
@@ -22,7 +16,6 @@ socket.on('message', (message) => {
 	// Scroll down
 	chatMessages.scrollTop = chatMessages.scrollHeight;
 });
-
 
 //Displaying if a user is typing
 socket.on('typing', (user) => {
