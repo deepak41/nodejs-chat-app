@@ -2,7 +2,7 @@
 
 ![Build Status](https://travis-ci.org/joemccann/dillinger.svg?branch=master)
 
-NodeJs 10.23.3, ExpressJs 4.13.0 based chat service.
+NodeJs, ExpressJs & Socket.io based chat service.
 
 
 ## Getting Started
