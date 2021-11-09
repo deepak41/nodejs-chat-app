@@ -17,13 +17,13 @@ socket.on('message', (message) => {
 	chatMessages.scrollTop = chatMessages.scrollHeight;
 });
 
-//Displaying if a user is typing
+// Displaying if a user is typing
 socket.on('typing', (user) => {
 	setfeedbackDisplay(true)
     feedback.innerHTML = '<p><em>' + user + ' is typing...</em></p>';
 })
 
-//Displaying if a user has stopped typing
+// Displaying if a user has stopped typing
 socket.on('done-typing', (user) => {
     feedback.innerHTML = '';
     setfeedbackDisplay(false)
