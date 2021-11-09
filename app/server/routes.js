@@ -5,9 +5,13 @@ function routes(app) {
 	    res.render('home')
 	});
 
+
 	//Rooms
 	app.get('/chat', (req, res)=>{
-	    res.render('chat')
+	    res.render('chat', { 
+	    	username: req.query.username,
+	    	room: req.query.room
+	    });
 	});	
 }
 
