@@ -14,7 +14,7 @@ app.use(bodyParser.urlencoded({extended: false}));
 // Set public directory
 app.use(express.static(path.join(__dirname, 'app/client')));
 
-// Set templating engine as EJS
+// Set EJS as templating engine
 app.set('view engine', 'ejs');
 app.set('views', path.join(__dirname, 'app/client/views'));
 
