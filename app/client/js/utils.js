@@ -49,7 +49,6 @@ function outputUsers(users) {
 	});
 }
 
-
 // Prompt the user before leaving chat room
 function leaveRoom() {
 	const response = confirm('Are you sure you want to leave the chatroom?');
@@ -61,7 +60,7 @@ function leaveRoom() {
 // Sending username if the user is typing
 function typing(e) {
 	if(e.keyCode != 13)
-		socket.emit('typing', {username, room});
+		socket.emit('typing', { username, room });
 }
 
 // Sending username if the user has stopped typing
@@ -69,12 +68,11 @@ var typingTimer;
 function doneTyping() {	
 	clearTimeout(typingTimer);
 	typingTimer = setTimeout(function () {
-		//do something
     	socket.emit('done-typing', { username, room });
-	}, 1000);
+	}, 700);    // 700 ms
 }
 
-// To show/hide feedback div in html
+// To show/hide feedback div in chat page
 function setfeedbackDisplay(show) {
 	if(show == true)
 		feedback.style.display = "block";

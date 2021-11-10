@@ -1,10 +1,10 @@
 const socket = io();
 
 // Join chatroom
-socket.emit('joinRoom', {username, room});
+socket.emit('joinRoom', { username, room });
 
 // Get room and users
-socket.on('roomUsers', ({room, users}) => {
+socket.on('roomUsers', ({ room, users }) => {
 	outputRoomName(room);
 	outputUsers(users);
 });
@@ -13,7 +13,7 @@ socket.on('roomUsers', ({room, users}) => {
 socket.on('message', (message) => {
 	outputMsg(message);
 
-	// Scroll down
+	// Scroll down when new messages come
 	chatMessages.scrollTop = chatMessages.scrollHeight;
 });
 

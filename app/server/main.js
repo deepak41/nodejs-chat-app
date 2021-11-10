@@ -13,7 +13,7 @@ function main(io) {
 	io.on('connection', socket => {
 		
 		// Runs when client joins a chat room
-		socket.on('joinRoom', ({username, room}) => {
+		socket.on('joinRoom', ({ username, room }) => {
 			const user = joinRoom(socket.id, username, room);
 			socket.join(user.room);
 
@@ -43,13 +43,13 @@ function main(io) {
 		});
 
 
-		//Broadcasting the user who is typing
+		// Broadcasting the user who is typing
         socket.on('typing', (data) => {
             socket.broadcast.to(data.room).emit('typing', data.username)
         })
 
 
-        //Broadcasting the user who has stopped typing
+        // Broadcasting the user who has stopped typing
         socket.on('done-typing', (data) => {
             socket.broadcast.to(data.room).emit('done-typing', data.username)
         })
@@ -71,7 +71,7 @@ function main(io) {
 				});
 			}
 		});
-	})
+	});
 }
 
 module.exports = main;
