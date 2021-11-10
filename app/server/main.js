@@ -44,15 +44,15 @@ function main(io) {
 
 
 		// Broadcasting the user who is typing
-        socket.on('typing', (data) => {
-            socket.broadcast.to(data.room).emit('typing', data.username)
-        })
+		socket.on('typing', (data) => {
+			socket.broadcast.to(data.room).emit('typing', data.username)
+		})
 
 
-        // Broadcasting the user who has stopped typing
-        socket.on('done-typing', (data) => {
-            socket.broadcast.to(data.room).emit('done-typing', data.username)
-        })
+		// Broadcasting the user who has stopped typing
+		socket.on('done-typing', (data) => {
+			socket.broadcast.to(data.room).emit('done-typing', data.username)
+		})
 
 
 		// Runs when client disconnects
