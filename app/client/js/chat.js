@@ -20,8 +20,8 @@ socket.on('message', (message) => {
 
 // Displaying if a user is typing
 socket.on('typing', (user) => {
-	setfeedbackDisplay(true)
-    feedback.innerHTML = '<p><em>' + user + ' is typing...</em></p>';
+	setfeedbackDisplay(true);
+	feedback.innerHTML = '<p><em>' + user + ' is typing...</em></p>';
 })
 
 // Displaying if a user has stopped typing

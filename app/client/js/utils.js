@@ -52,9 +52,8 @@ function outputUsers(users) {
 // Prompt the user before leaving chat room
 function leaveRoom() {
 	const response = confirm('Are you sure you want to leave the chatroom?');
-	if(response) {
+	if(response)
 		window.location.replace('/');
-	}
 }
 
 // Sending username if the user is typing
@@ -67,8 +66,8 @@ function typing(e) {
 var typingTimer; 
 function doneTyping() {	
 	clearTimeout(typingTimer);
-	typingTimer = setTimeout(function () {
-    	socket.emit('done-typing', { username, room });
+	typingTimer = setTimeout(() => {
+		socket.emit('done-typing', { username, room });
 	}, 700);    // 700 ms
 }
 

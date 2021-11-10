@@ -10,7 +10,7 @@ function joinRoom(id, username, room) {
 }
 
 // Get current user
-	function getActiveUser(id) {
+function getActiveUser(id) {
 	return users.find(user => user.id === id);
 }
 
