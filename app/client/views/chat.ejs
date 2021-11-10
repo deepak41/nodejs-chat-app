@@ -42,6 +42,8 @@
     </div>
   </div>
   <script>
+    // Don't show typing status div when the page loads/reloads
+    document.querySelector('.typing-status').style.display = "none";
     var username = <%- JSON.stringify(username) %>;
     var room = <%- JSON.stringify(room) %>;
   </script>
