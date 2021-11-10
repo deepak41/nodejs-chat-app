@@ -1,7 +1,7 @@
 const chatMessages = document.querySelector('.chat-messages');
 const roomName = document.getElementById('room-name');
 const userList = document.getElementById('users');
-const feedback = document.querySelector('.feedback');
+const typingStatus = document.querySelector('.typing-status');
 
 
 // To send message in chat room
@@ -71,12 +71,12 @@ function doneTyping() {
 	}, 700);    // 700 ms
 }
 
-// To show/hide feedback div in chat page
-function setfeedbackDisplay(show) {
+// To show/hide typing-status div in chat page
+function showTypingStatus(show) {
 	if(show == true)
-		feedback.style.display = "block";
+		typingStatus.style.display = "block";
 	else
-		feedback.style.display = "none";
+		typingStatus.style.display = "none";
 }
 
-setfeedbackDisplay(false)
+showTypingStatus(false)
