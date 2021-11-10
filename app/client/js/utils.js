@@ -79,4 +79,5 @@ function showTypingStatus(show) {
 		typingStatus.style.display = "none";
 }
 
+// Don't show typing status div when the page loads/reloads
 showTypingStatus(false)
