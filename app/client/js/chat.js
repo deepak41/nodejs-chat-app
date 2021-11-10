@@ -1,3 +1,4 @@
+// If frontend & server both are served on the same domain, no need to specify server url
 const socket = io();
 
 // Join chatroom
