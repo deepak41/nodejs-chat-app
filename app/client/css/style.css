@@ -1,10 +1,5 @@
-/*@import url('https://fonts.googleapis.com/css?family=Roboto&display=swap');*/
+@import url('http://fonts.cdnfonts.com/css/segoe-ui-4');
 
-/*My custom fonts*/
-@font-face {
-  font-family: OpenSans;
-  src:url(../fonts/OpenSans-Regular.ttf);
-}
 
 :root {
 	--dark-color-a: #003638;
@@ -23,7 +18,7 @@
 }
 
 body {
-	font-family: 'OpenSans', sans-serif;
+	font-family: 'Segoe UI', sans-serif;
 	font-size: 16px;
 	background: var(--light-color);
 	margin: 20px;
@@ -263,14 +258,14 @@ i.fas.fa-paper-plane{
 
 /* My custom styles */
 .leave-room {
-    font-family: 'OpenSans';
-    background-color: red;
+    background-color: #E10000;
     color: white;
-    font-weight: bold;
+    font-weight: 500;
 }
 
-.msg-input {
-    font-family: 'OpenSans';
+.login {
+    background-color: #BB4242;
+    color: white;
 }
 
 .typing-status {
@@ -278,4 +273,18 @@ i.fas.fa-paper-plane{
 	background-color: #630000;
 	text-align: right;
 	padding: 0.25% 5%;
+}
+
+.join-header img {
+	height:auto;
+	width:6.5%
+}
+
+.chat-header img {
+	height:auto;
+	width:5.5%
+}
+
+.msg-input, .btn, #username, #room {
+    font-family: 'Segoe UI', sans-serif;
 }
