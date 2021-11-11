@@ -18,7 +18,7 @@ function sendMsg(msg) {
 	document.getElementById("msg").focus();
 }
 
-// Output message to DOM
+// Output chat message to DOM
 function outputMsg(message) {
 	const div = document.createElement('div');
 	div.classList.add('message');
