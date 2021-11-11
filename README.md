@@ -1,6 +1,5 @@
 # Nodejs Chat App
 
-![Build Status](https://travis-ci.org/joemccann/dillinger.svg?branch=master)
 
 NodeJs, ExpressJs & Socket.io based chat service.
 
