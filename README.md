@@ -1,7 +1,7 @@
 # Nodejs Chat App
 
 
-NodeJs, ExpressJs & Socket.io based chat service.
+NodeJs, ExpressJs & Socket.io based real-time chat service.
 
 
 ## Getting Started
