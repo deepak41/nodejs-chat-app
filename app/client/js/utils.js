@@ -5,21 +5,21 @@ const typingStatus = document.querySelector('.typing-status');
 
 
 // To send message in chat room
-function sendMsg(msg) {
-	msg = msg.trim();
-	if(!msg)
+function sendMessage(message) {
+	message = message.trim();
+	if(!message)
 		return false;
 
 	// Emit message to server
-	socket.emit('chatMessage', msg);
+	socket.emit('chatMessage', message);
 
-	// Clear input
+	// Clear input field
 	document.getElementById('msg').value = "";
 	document.getElementById("msg").focus();
 }
 
 // Output chat message to DOM
-function outputMsg(message) {
+function renderMessage(message) {
 	const div = document.createElement('div');
 	div.classList.add('message');
 	const p = document.createElement('p');
