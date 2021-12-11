@@ -13,7 +13,7 @@ function main(io) {
 	io.on('connection', socket => {
 		
 		// Runs when client joins a chat room
-		socket.on('joinRoom', ({ username, room }) => {
+		socket.on('join-room', ({ username, room }) => {
 			const user = joinRoom(socket.id, username, room);
 			socket.join(user.room);
 
@@ -29,7 +29,7 @@ function main(io) {
 				);
 
 			// Current active users and room name
-			io.to(user.room).emit('roomUsers', {
+			io.to(user.room).emit('room-users', {
 				room: user.room,
 				users: getIndividualRoomUsers(user.room)
 			});
@@ -37,9 +37,9 @@ function main(io) {
 
 
 		// Listen for client message
-		socket.on('chatMessage', msg => {
+		socket.on('chatMessage', message => {
 			const user = getActiveUser(socket.id);
-			io.to(user.room).emit('message', formatMessage(user.username, msg));
+			io.to(user.room).emit('message', formatMessage(user.username, message));
 		});
 
 
@@ -65,7 +65,7 @@ function main(io) {
 				);
 
 				// Current active users and room name
-				io.to(user.room).emit('roomUsers', {
+				io.to(user.room).emit('room-users', {
 					room: user.room,
 					users: getIndividualRoomUsers(user.room)
 				});
