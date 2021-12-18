@@ -2,14 +2,12 @@ const path = require('path');
 const http = require('http');
 const express = require('express');
 const socket_io = require('socket.io');
-const bodyParser = require('body-parser');
 const main = require('./app/server/main');
 const routes = require('./app/server/routes');
 const PORT = 5000;
 
 
 const app = express();
-app.use(bodyParser.urlencoded({extended: false}));
 
 // Set public directory
 app.use(express.static(path.join(__dirname, 'app/client')));
