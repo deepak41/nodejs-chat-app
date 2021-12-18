@@ -49,9 +49,9 @@ function outputUsers(users) {
 	});
 }
 
-// Prompt the user before leaving chat room
-function leaveRoom() {
-	const response = confirm('Are you sure you want to leave the chatroom?');
+// Prompt the user before exiting chat room
+function exitRoom() {
+	const response = confirm('Are you sure you want to exit the chatroom?');
 	if(response)
 		window.location.replace('/');
 }
