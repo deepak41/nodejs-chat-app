@@ -8,10 +8,7 @@ function routes(app) {
 
 	// Render Chat page
 	app.get('/chat', (req, res) => {
-	    res.render('chat', { 
-	    	username: req.query.username,
-	    	room: req.query.room
-	    });
+		res.render('chat');
 	});	
 }
 

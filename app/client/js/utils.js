@@ -36,7 +36,7 @@ function renderMessage(message) {
 
 // Add room name to DOM
 function outputRoomName(room) {
-	roomName.innerText = room;
+	roomName.innerHTML = '<i class="fas fa-igloo"></i> ' + room;
 }
 
 // Add users in the room to DOM

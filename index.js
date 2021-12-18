@@ -1,7 +1,7 @@
 const path = require('path');
 const http = require('http');
 const express = require('express');
-const socketio = require('socket.io');
+const socket_io = require('socket.io');
 const bodyParser = require('body-parser');
 const main = require('./app/server/main');
 const routes = require('./app/server/routes');
@@ -23,7 +23,7 @@ routes(app);
 
 // Create server
 const server = http.createServer(app);
-const io = socketio(server);
+const io = socket_io(server);
 main(io);
 
 // Start server
