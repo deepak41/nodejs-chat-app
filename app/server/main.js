@@ -18,15 +18,12 @@ function main(io) {
 			socket.join(user.room);
 
 			// General welcome
-			socket.emit('message', formatMessage("NodeJSChatApp", 'Welcome to the ' + room + ' chat room!'));
+			socket.emit('message', formatMessage('NodeJSChatApp', 'Welcome to the ' + room + ' chat room!'));
 
 			// Broadcast everytime users connects
 			socket.broadcast
 				.to(user.room)
-				.emit(
-					'message',
-					formatMessage("NodeJSChatApp", `${user.username} has joined the room`)
-				);
+				.emit('message', formatMessage('NodeJSChatApp', `${user.username} has joined the room`));
 
 			// Current active users and room name
 			io.to(user.room).emit('room-users', {
@@ -61,7 +58,7 @@ function main(io) {
 			if(user) {
 				io.to(user.room).emit(
 					'message',
-					formatMessage("NodeJSChatApp", `${user.username} has left the room`)
+					formatMessage('NodeJSChatApp', `${user.username} has left the room`)
 				);
 
 				// Current active users and room name
