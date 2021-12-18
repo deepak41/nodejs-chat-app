@@ -11,7 +11,7 @@ function sendMessage(message) {
 		return false;
 
 	// Emit message to server
-	socket.emit('chatMessage', message);
+	socket.emit('chat-message', message);
 
 	// Clear input field
 	document.getElementById('msg').value = "";
