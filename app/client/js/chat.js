@@ -1,6 +1,7 @@
 var username = localStorage.getItem('username');
 var room = localStorage.getItem('room');
 
+// Connect to the server.
 // If frontend & server both are served on the same domain, no need to specify server url
 const socket = io();
 
