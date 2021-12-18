@@ -1,4 +1,4 @@
-const moment = require('moment');
+var dayjs = require('dayjs')
 
 const users = [];
 
@@ -31,7 +31,7 @@ function formatMessage(username, text) {
 	return {
 		username,
 		text,
-		time: moment().format('h:mm a')
+		time: dayjs().format('hh:mm a')
 	};
 }
 

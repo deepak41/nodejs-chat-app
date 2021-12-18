@@ -9,7 +9,6 @@ const PORT = 5000;
 
 
 const app = express();
-app.use(bodyParser.urlencoded({extended: false}));
 
 // Set public directory
 app.use(express.static(path.join(__dirname, 'app/client')));
