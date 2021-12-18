@@ -34,7 +34,7 @@ function main(io) {
 
 
 		// Listen for client message
-		socket.on('chatMessage', message => {
+		socket.on('chat-message', message => {
 			const user = getActiveUser(socket.id);
 			io.to(user.room).emit('message', formatMessage(user.username, message));
 		});
