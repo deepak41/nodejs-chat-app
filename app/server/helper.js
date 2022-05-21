@@ -14,7 +14,7 @@ function getActiveUser(id) {
 	return users.find(user => user.id === id);
 }
 
-// User leaves chat
+// User leaves chat room
 function exitRoom(id) {
 	const index = users.findIndex(user => user.id === id);
 	if(index !== -1) 
