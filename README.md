@@ -1,4 +1,4 @@
-# Nodejs Chat App
+# NodeJS Chat App
 
 
 NodeJs, ExpressJs & Socket.io based real-time chat service.
