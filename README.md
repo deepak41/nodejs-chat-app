@@ -12,7 +12,7 @@ NodeJs, ExpressJs & Socket.io based real-time chat service.
 
 2. Then enter the following commands:   
 `$ cd nodejs-chat-app`  
-`$ sudo npm install`  
-`$ sudo nodemon`  
+`$ npm i`  
+`$ nodemon`  
 
 The app should be up and running. 
