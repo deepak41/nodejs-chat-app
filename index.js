@@ -5,7 +5,6 @@ const main = require('./app/server/main');
 const routes = require('./app/server/routes');
 const PORT = 5000;
 
-
 const app = express();
 
 // Set public directory
