@@ -3,16 +3,13 @@ const roomName = document.getElementById('room-name');
 const userList = document.getElementById('users');
 const typingStatus = document.querySelector('.typing-status');
 
-
 // To send message in chat room
 function sendMessage(message) {
 	message = message.trim();
 	if(!message)
 		return false;
-
 	// Emit message to server
 	socket.emit('chat-message', message);
-
 	// Clear input field
 	document.getElementById('msg').value = "";
 	document.getElementById("msg").focus();
@@ -63,7 +60,7 @@ function typing(e) {
 }
 
 // Sending username if the user has stopped typing
-var typingTimer; 
+let typingTimer;
 function doneTyping() {	
 	clearTimeout(typingTimer);
 	typingTimer = setTimeout(() => {

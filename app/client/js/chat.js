@@ -1,5 +1,5 @@
-var username = localStorage.getItem('username');
-var room = localStorage.getItem('room');
+let username = localStorage.getItem('username');
+let room = localStorage.getItem('room');
 
 // Connect to the server.
 // If frontend & server both are served on the same domain, no need to specify server url
@@ -17,7 +17,6 @@ socket.on('room-users', ({ room, users }) => {
 // Chat message from server
 socket.on('message', (message) => {
 	renderMessage(message);
-
 	// Scroll down when new messages come
 	chatMessages.scrollTop = chatMessages.scrollHeight;
 });

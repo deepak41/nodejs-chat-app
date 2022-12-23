@@ -1,4 +1,4 @@
-var dayjs = require('dayjs')
+let dayjs = require('dayjs')
 
 const users = [];
 
