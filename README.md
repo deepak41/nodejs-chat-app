@@ -17,6 +17,9 @@ NodeJs, ExpressJs & Socket.io based real-time chat service.
 
 The app should be up and running. 
 
-## Getting Started
 ### To provide port no.:
-`npm run dev port 8001`
+`npm run dev port 7001`
+
+
+### To run on AWS EC2 server using PM2:
+`sudo pm2 start index.js -- port 80`
