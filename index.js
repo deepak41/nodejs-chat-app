@@ -3,7 +3,7 @@ const express = require('express');
 const socket_io = require('socket.io');
 const main = require('./app/server/main');
 const routes = require('./app/server/routes');
-const PORT = 5000;
+const PORT = process.argv.slice(2)[0]=="port" ? process.argv.slice(2)[1] : 3000;
 
 const app = express();
 
